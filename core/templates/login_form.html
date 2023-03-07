@@ -1,0 +1,52 @@
+{% extends 'modelo.html' %}
+
+{% block titulo %}
+<title>Login</title>
+{% endblock %}
+
+
+            {% block opcoes_menu %}
+            <ul>
+                <li><a href="{% url 'modelo' %}">Inicio</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="{% url 'proposta' %}">Orçamento</a></li>
+            </ul>
+            {% endblock %}
+
+
+{% block conteudo %}
+
+<div class="container">
+    <div class="box">
+        <form class="form" id="formPainel" method="post" action="/dologin/">
+
+            {% if msg %}
+            <div class="alert {{class}}">
+              {{msg}}
+            </div>
+            {% endif %}
+
+            {% csrf_token %}
+            <h2>Entrar</h2>
+            <div class="inputBox">
+                <input type="text" name="username" required="required">
+                <span>User</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" name="password" required="required">
+                <span>password</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="#">Recuperar Senha</a>
+                <a href="#">Cadastre-se</a>
+            </div>
+            <a href="">
+                <button type="submit" value="Login">Entrar</button>
+            </a>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

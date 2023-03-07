@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    {% block titulo %}
+    <title>Modelo</title>
+    {% endblock %}
+
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!-- Styel CSS local -->
+    <link rel="stylesheet" href="{% static 'css/style_login.css' %}">
+
+    
+</head>
+
+<body>
+
+    {% block menu %}
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <span><img src="{% static 'img/Logo.png' %}"></span>
+            </div>
+
+            {% block opcoes_menu %}
+            <ul>
+                <li><a href="{% url 'login_form' %}">Entrar</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="{% url 'proposta' %}">Orçamento</a></li>
+            </ul>
+            {% endblock %}
+        </div>
+
+    </nav>
+    {% endblock %}
+
+    {% block conteudo %}
+
+    <div class="container_mockup">
+        <div class="mockup">
+            <img src="{% static 'img/Mockup_tela.png' %}" width="900px">
+        </div>
+
+        <div class="mockup2">
+            <img src="{% static 'img/mockup_pagina.png' %}" width="900px">
+        </div>
+    </div>
+
+    {% endblock %}
+
+</body>
+
+</html>
