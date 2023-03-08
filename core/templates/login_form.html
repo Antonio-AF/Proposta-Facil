@@ -7,7 +7,7 @@
 
             {% block opcoes_menu %}
             <ul>
-                <li><a href="{% url 'modelo' %}">Inicio</a></li>
+                <li><a href="{% url 'login_form' %}">Inicio</a></li>
                 <li><a href="#">Dashboard</a></li>
                 <li><a href="{% url 'proposta' %}">Orçamento</a></li>
             </ul>
@@ -18,7 +18,7 @@
 
 <div class="container">
     <div class="box">
-        <form class="form" id="formPainel" method="post" action="/dologin/">
+        <form class="form" id="formPainel" method="post" action="/dologin/" autocomplete="off">
 
             {% if msg %}
             <div class="alert {{class}}">
@@ -40,7 +40,7 @@
             </div>
             <div class="links">
                 <a href="#">Recuperar Senha</a>
-                <a href="#">Cadastre-se</a>
+                <a href="{% url 'cadastro' %}">Cadastre-se</a>
             </div>
             <a href="">
                 <button type="submit" value="Login">Entrar</button>

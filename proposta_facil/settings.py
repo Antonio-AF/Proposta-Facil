@@ -79,8 +79,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'proposta_facil',
         'HOST': 'localhost',
-        'USER': 'Antonio AF',
-        'PASSWORD': '361766',
+        'USER': 'root',
+        'PASSWORD': 'root',
         'PORT': '3306',
     }
 }

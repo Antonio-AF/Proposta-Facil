@@ -46,13 +46,10 @@
     {% block conteudo %}
 
     <div class="container_mockup">
-        <div class="mockup">
-            <img src="{% static 'img/Mockup_tela.png' %}" width="900px">
-        </div>
-
-        <div class="mockup2">
-            <img src="{% static 'img/mockup_pagina.png' %}" width="900px">
-        </div>
+        <video autoplay loop poster="images/torres.jpg" class="bg_video">
+            <source src="vhttps://media.istockphoto.com/id/1439129966/pt/v%C3%ADdeo/cadastre-city-building-survey-map.mp4?s=mp4-640x640-is&k=20&c=uF712mGV_hISRKSuy7Xg2mIoSKGL264LdubmOd5Sd68=" type="video/webm">
+            <source src="videos/bg.mp4" type="video/mp4">
+        </video>
     </div>
 
     {% endblock %}
