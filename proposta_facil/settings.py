@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'proposta_facil',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': '#Civ361766',
         'PORT': '3306',
     }
 }

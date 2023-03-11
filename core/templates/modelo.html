@@ -1,10 +1,11 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% block titulo %}
     <title>Modelo</title>
@@ -17,7 +18,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <!-- Styel CSS local -->
-    <link rel="stylesheet" href="{% static 'css/style_login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_modelo.css' %}">
 
     
 </head>
@@ -26,18 +27,10 @@
 
     {% block menu %}
     <nav>
-        <div class="menu">
-            <div class="logo">
+        <div class="menu-proposta">
+            <div class="logo-proposta">
                 <span><img src="{% static 'img/Logo.png' %}"></span>
             </div>
-
-            {% block opcoes_menu %}
-            <ul>
-                <li><a href="{% url 'login_form' %}">Entrar</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="{% url 'proposta' %}">Orçamento</a></li>
-            </ul>
-            {% endblock %}
         </div>
 
     </nav>
@@ -45,12 +38,7 @@
 
     {% block conteudo %}
 
-    <div class="container_mockup">
-        <video autoplay loop poster="images/torres.jpg" class="bg_video">
-            <source src="vhttps://media.istockphoto.com/id/1439129966/pt/v%C3%ADdeo/cadastre-city-building-survey-map.mp4?s=mp4-640x640-is&k=20&c=uF712mGV_hISRKSuy7Xg2mIoSKGL264LdubmOd5Sd68=" type="video/webm">
-            <source src="videos/bg.mp4" type="video/mp4">
-        </video>
-    </div>
+
 
     {% endblock %}
 
