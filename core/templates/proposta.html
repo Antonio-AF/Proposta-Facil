@@ -1,10 +1,125 @@
 {% extends 'modelo.html' %}
+{% load static %}
 
 {% block titulo %}
 <title>Cadastro</title>
 {% endblock %}
 
-
-{% block opcoes_menu %}
-
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style_cadastro.css' %}">
 {% endblock %}
+
+{% block conteudo %}
+
+<div class="tab">
+
+    <input type="radio" name="tabs" id="tab_cadastro" checked>
+    <label for="tab_cadastro" id="labels">Cadastro</label>
+
+    <input type="radio" name="tabs" id="tab_orcamento" checked>
+    <label for="tab_orcamento" id="labels">Orçamento</label>
+
+    <input type="radio" name="tabs" id="tab_dashboard" checked>
+    <label for="tab_dashboard" id="labels">Dashboard</label>
+
+    <input type="radio" name="tabs" id="tab_clientes" checked>
+    <label for="tab_clientes" id="labels">Clientes</label>
+
+    <input type="radio" name="tabs" id="tab_propostas" checked>
+    <label for="tab_propostas" id="labels">Propostas</label>
+
+
+    <div class="tabs">
+
+        <div class="content">
+
+            <!-- <h2>Cadastro de Clientes</h2> -->
+
+            <div>
+                <form role="form">
+                    <fieldset>
+                        <legend>Cadastro de Cliente</legend>
+
+                        <!-- Campos Nome e Sobre Nome. -->
+                        <div class="row">
+                            <div class="form-group-0">
+                                <label for="nome">Nome:</label><br>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+                            <div class="form-group-0">
+                                <label for="sobre_nome">Sobre Nome:</label><br>
+                                <input type="text" id="sobre_nome" name="sobre_nome" required>
+                            </div>
+                            <div class="form-group-0">
+                                <label for="cpf_cnpj">Sexo:</label><br>
+                                <select id="sexo" name="sexo">
+                                    <option value="m">Masculino</option>
+                                    <option value="f">Feminino</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Campos CPF/CNPJ e E-mail. -->
+                        <div class="row">
+                            <div class="form-group-1">
+                                <label for="cpf_cnpj">CPF/CNPJ:</label><br>
+                                <input type="text" id="cpf_cnpj" name="cpf_cnpj" required>
+                            </div>
+                            <div class="form-group-1">
+                                <label for="email">E-mail:</label><br>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group-1">
+                                <label for="enviar_email">Enviar E-mail?</label><br>
+                                <select id="enviar_email" name="enviar_email">
+                                    <option value="sim">Sim</option>
+                                    <option value="nao">Não</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Campos EnviarE-mail, Data de Nascimento e Sexo. -->
+                        <div class="row">
+                            <div class="form-group-2">
+                                <label for="data_nascimento">Dt. Nascimento:</label><br>
+                                <input type="date" id="data_nascimento" name="data_nascimento">
+                            </div>
+                            <div class="form-group-2">
+                                <label for="fone">Fone:</label><br>
+                                <input type="text" id="fone" name="fone">
+                            </div>
+                            <div class="form-group-2">
+                                <label for="fone">Cel:</label><br>
+                                <input type="text" id="cel" name="cel">
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="content">
+            <h2>Orçamentos</h2>
+            <p>Aqui teremos o formulário de cadastro orçamentos.</p>
+        </div>
+
+        <div class="content">
+            <h2>Dashboard</h2>
+            <p>Aqui teremos a Dashboaard de todas as propostas emitidas.</p>
+        </div>
+
+        <div class="content">
+            <h2>Listagem de Clientes</h2>
+            <p>Aqui teremos a listagem de clientes.</p>
+        </div>
+
+        <div class="content">
+            <h2>Listagem das proposta</h2>
+            <p>Aqui teremos a listagem de todas as propostas.</p>
+        </div>
+
+    </div>
+
+
+    {% endblock %}

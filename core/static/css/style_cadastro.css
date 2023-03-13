@@ -1,135 +1,201 @@
-/* CSS reset
-*,
-*:before,
-*:after {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-} */
+*
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
 
-/* a {
-    text-decoration: none;
-} */
+.tab
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000000;
+    width: 70rem;
+    margin: 50px auto; 
+}
 
-/* label{
-    color: #283142;
-    font-weight: 500;
-    font-family: sans-serif;
+.tab #labels
+{
+    color: #ffffff !important;
+}
 
-} */
+.tab input[type]
+{
+    display: none;
+}
 
+/* Envolve todo o conteúdo de cada menu */
+.tab label
+{
+    display: inline-block;
+    /* float: left; */
+    padding: 12px 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
 
-/* Style the header with a grey background and some padding */
+.tab #labels:hover,
+.tab input:checked + label
+{
+    background: #e39b42;
+    /* color: #5da1ff; */
+}
+
+.tabs
+{
+    clear: both;
+    perspective: 400px;
+    -webkit-perspective: 400px;
+}
+
+.tabs .content
+{
+    background: #ffffffc4;
+    width: 70rem;
+    position: absolute;
+    padding: 10px 30px 40px;
+    line-height: 1.4em;
+    opacity: 0;
+    transform: rotateX(-20deg);
+    transform-origin: top center;
+    transition: opacity .3s, transform 1s;
+    z-index: 0;
+}
+
+#tab_cadastro:checked ~ .tabs .content:nth-of-type(1),
+#tab_orcamento:checked ~ .tabs .content:nth-of-type(2),
+#tab_dashboard:checked ~ .tabs .content:nth-of-type(3),
+#tab_clientes:checked ~ .tabs .content:nth-of-type(4), 
+#tab_propostas:checked ~ .tabs .content:nth-of-type(5)
+{
+  transform: rotateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Formulário de Cadastro de cliente. */
 
 .container{
-    display: inline-flex;
-    flex-direction: row;
-    height: auto;
-    background-color: #E39A42;
-    box-shadow: 2px 2px 2px 1px rgba(35, 27, 27, 0.395);
-    justify-content: space-between;
-    max-width: 7000px!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    min-height: 100%;
 
 }
 
-.container_menu{
-    display: inline-flex;
-    flex-direction: row;
-    height: auto;
+.form_cliente
+{
+    margin-top: 30px;
+    /* border: 1px solid #b3b3b3; */
+    
 }
 
+fieldset legend
+{
+    margin: 0px 10px 0 10px;
+    padding: 0px 3px 0 3px;
+}
+form label
+{
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+}
 
-.container_menu > div {
-    margin: 20px;
+/* Estilização dos inputs */
+form input[type="text"], input[type="email"], input[type="date"]
+{        
+    width: 40vh;
+    box-sizing: border-box;
+    padding: px;
+    margin: 0px 10px 0 10px;
+    display: table-row !important;
+    border: 1px solid #ccc;
+    border-radius: 2px;    
+    margin-bottom: 10px;
+    
+}
+
+/* Estilização da seleção de sexo e enviar e-mail */
+form select
+{
+    width: 20vh;
+    margin: 0 0 0 10px;
+
+}
+
+/* Estilização do input da data de nascimento */
+/* form input[type="date"]
+{    
+    width: 22%;
     padding: 5px;
-    font-size: 25px;
+    margin: 10px;
+    
+} */
+
+/* Estilização do form */
+.row
+{
+    display: flex;
+    margin-top: 10px
 }
 
-.menu{
-    align-content: center;
+.form-group-0
+{
+    flex: 0;
+    height: auto;
+    width: auto;
 }
 
-.menu > a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: 400;
-
+.form-group-0 label
+{
+    margin: 0 0 0 10px;
+    padding: 0;
 }
 
-/* Customer registration form style sheet */
-
-.container_cadastro{
-    background-color: #c8c8c8;
-    border: solid 2px #898989;
-    margin: 0px 60px 0px 60px;
-    padding: 24px;
+.form-group-0 input
+{
+    margin-top: 0;
 }
 
-.container_label_cadastro{
-    background-color: #000000;
-    color: #E39A42;
-    margin-top: 20px;
-    margin-left: 60px;
-    margin-right: 60px;
-
+.form-group-1
+{
+    flex: 1;
+    height: auto;
+    width: auto;
 }
 
-table > .servico{
-    height: 35px;
+.form-group-1 label
+{
+    margin: 0 0 0 10px;
+    padding: 0;
 }
 
-table > .qto{
-    height: 35px;
+.form-group-1 input
+{
+    margin-top: 0;
 }
 
-table > .valor_un{
-    height: 35px;
+.form-group-2
+{
+    flex: 1;
+    height: auto;
+    width: auto;
 }
 
-
-.cliente{
-    width: 380px;
-    border-radius: 2px;
+.form-group-2 label
+{
+    margin: 0 0 0 10px;
+    padding: 0;
 }
 
-.fone{
-    width: 230px;
-    border-radius: 2px;
-
+.form-group-2 input
+{
+    margin-top: 0;
 }
 
-.endereco{
-    width: 380px;
-    border-radius: 2px;
-
-}
-
-.uf{
-    width: 60px;
-    border-radius: 2px;
-
-}
-
-
-.container_label_servico{
-    background-color: #000000;
-    margin-top: 20px;
-    margin-left: 60px;
-    margin-right: 60px;
-}
-
-.container_servico{
-    background-color: #c8c8c8;
-    border: solid 2px #898989;
-    margin: 0px 60px 0px 60px;
-    padding: 14px;
-}
-
-/* Estilizando a tag textarea */
-
-.observacao{
-    size: none;
-    width: 100%;
-    height: 100px;
-
+#fone,
+#cel
+{
+    width: 30vh;
 }

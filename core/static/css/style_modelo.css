@@ -23,7 +23,8 @@ body
     flex-direction: row;
     min-height: 100vh;
     background: url("../img/fundo2.png") no-repeat center fixed;
-    background-size: auto;   
+    background-size: contain; 
+    background-size: 150%;  
     overflow-y: hidden;
 }
 
@@ -42,7 +43,7 @@ body
     justify-content: center;
     align-items: center;
     min-height: 90vh;
-    /* background-color: #0c1e332a;    */
+      
     
 }
 
